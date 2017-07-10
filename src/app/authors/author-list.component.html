@@ -1,0 +1,20 @@
+<div class="author-list">
+    <div class="table-responsive">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Image</th>
+                    <th>Name</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let author of authors">
+                    <td>{{ author.id }}</td>
+                    <td><img [src]='author.imageUrl'/></td>
+                    <td>{{ author.name }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
