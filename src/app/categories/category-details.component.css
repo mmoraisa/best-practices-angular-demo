@@ -1,0 +1,24 @@
+h1{
+    font-size: 24px;
+}
+
+input{
+    font-size: 26px;
+    display: inline-block;
+    width: 400px;
+    max-width: calc(100% - 47px);
+    padding: 20px;
+    margin-right: 5px;
+}
+
+.btn-save{
+    height: 40px;
+    margin-bottom: 8px;
+}
+
+.book{
+    background-color: rgba(0,0,0,.3);
+    display: inline-block;
+    margin: 5px;
+    padding: 50px;
+}

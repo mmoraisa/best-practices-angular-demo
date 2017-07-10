@@ -3,13 +3,17 @@ import { ICategory } from "app/categories/category";
 import { CategoryService } from "app/categories/category.service";
 
 @Component({
-    selector: '',
+    selector: 'lib-categories',
     templateUrl: 'category-list.component.html'
 })
 export class CategoryListComponent implements OnInit{
     categories: ICategory[];
 
     constructor(private __categoryService: CategoryService){}
+
+    editCategory(categoryId: number): void{
+        debugger;
+    }
 
     ngOnInit(): void {
         this.categories = this.__categoryService.getCategories();

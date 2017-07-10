@@ -17,4 +17,15 @@ export class CategoryService{
         ];
     }
 
+    getCategory(id: number): ICategory{
+        return {
+            id: 1,
+            name: 'Drama'
+        };
+    }
+
+    saveCategory(category: ICategory): boolean{
+        return true;
+    }
+
 }

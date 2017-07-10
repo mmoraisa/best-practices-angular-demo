@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 
@@ -7,13 +8,15 @@ import { RouterModule } from '@angular/router';
 import { BookListComponent } from "app/books/book-list.component";
 import { AuthorListComponent } from "app/authors/author-list.component";
 import { CategoryListComponent } from "app/categories/category-list.component";
+import { CategoryDetailsComponent } from "app/categories/category-details.component";
 
 @NgModule({
   declarations: [
     AppComponent,
     BookListComponent,
     AuthorListComponent,
-    CategoryListComponent
+    CategoryListComponent,
+    CategoryDetailsComponent
   ],
   imports: [
     BrowserModule,
@@ -23,10 +26,11 @@ import { CategoryListComponent } from "app/categories/category-list.component";
       { path: 'books', component: BookListComponent },
       // { path: 'book/:id', component: BookDetailComponent },
       { path: 'categories', component: CategoryListComponent },
-      // { path: 'category/:id', component: CategoryDetailComponent },
+      { path: 'category/:id', component: CategoryDetailsComponent },
       { path: '', redirectTo: 'books', pathMatch: 'full' },
       // { path: '**', component: PageNotFoundComponent },
-    ])
+    ]),
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
