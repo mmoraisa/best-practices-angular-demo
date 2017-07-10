@@ -11,6 +11,13 @@
                 </tr>
             </thead>
             <tbody>
+                <tr *ngFor="let book of books">
+                    <td>{{ book.id }}</td>
+                    <td>{{ book.name }}</td>
+                    <td>{{ book.description }}</td>
+                    <td>{{ book.author.name }}</td>
+                    <td>{{ book.category.name }}</td>
+                </tr>
             </tbody>
         </table>
     </div>
