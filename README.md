@@ -1,6 +1,8 @@
-# BestPracticesAngularDemo
+# Library Software developed with Angular 2
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.2.0.
+This project project made to show what is the best practices while developing Angular 2 applications.
+
+It's a Library Software that controls the books, categories and authors CRUD.
 
 ## Development server
 
