@@ -6,8 +6,5 @@
 <hr/>
 <section class="books">
     <h1>Books</h1>
-    <div *ngFor="let book of books" class="book">
-        <div class="name">{{ book.name }}</div>
-        <div class="author">{{ book.author.name }}</div>
-    </div>
+    <lib-book-thumb [id]='category.id' filterBy='category'></lib-book-thumb>
 </section>

@@ -9,20 +9,24 @@ import { BookListComponent } from "app/books/book-list.component";
 import { AuthorListComponent } from "app/authors/author-list.component";
 import { CategoryListComponent } from "app/categories/category-list.component";
 import { CategoryDetailsComponent } from "app/categories/category-details.component";
+import { BookThumbComponent } from "app/books/book-thumb.component";
+import { AuthorDetailsComponent } from "app/authors/author-details.component";
 
 @NgModule({
   declarations: [
     AppComponent,
     BookListComponent,
     AuthorListComponent,
+    AuthorDetailsComponent,
     CategoryListComponent,
-    CategoryDetailsComponent
+    CategoryDetailsComponent,
+    BookThumbComponent
   ],
   imports: [
     BrowserModule,
     RouterModule.forRoot([
       { path: 'authors', component: AuthorListComponent },
-      // { path: 'author/:id', component: AuthorDetailComponent },
+      { path: 'author/:id', component: AuthorDetailsComponent },
       { path: 'books', component: BookListComponent },
       // { path: 'book/:id', component: BookDetailComponent },
       { path: 'categories', component: CategoryListComponent },

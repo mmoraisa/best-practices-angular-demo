@@ -15,8 +15,8 @@
                     <td>{{ book.id }}</td>
                     <td>{{ book.name }}</td>
                     <td>{{ book.description }}</td>
-                    <td>{{ book.author.name }}</td>
-                    <td>{{ book.category.name }}</td>
+                    <td><a [routerLink]="['/author',book.author.id]">{{ book.author.name }}</a></td>
+                    <td><a [routerLink]="['/category',book.category.id]">{{ book.category.name }}</a></td>
                 </tr>
             </tbody>
         </table>

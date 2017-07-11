@@ -9,7 +9,7 @@
                 </tr>
             </thead>
             <tbody>
-                <tr *ngFor="let author of authors">
+                <tr *ngFor="let author of authors" [routerLink]="['/author',author.id]">
                     <td>{{ author.id }}</td>
                     <td><img [src]='author.imageUrl'/></td>
                     <td>{{ author.name }}</td>
