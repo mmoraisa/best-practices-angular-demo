@@ -1,0 +1,55 @@
+input{
+    font-size: 26px;
+    display: inline-block;
+    width: 400px;
+    max-width: 100%;
+    padding: 20px;
+    margin: 0 5px 8px 0;
+}
+
+textarea{
+    min-height: 200px;
+    resize: vertical;
+}
+
+.btn-save{
+    height: 40px;
+    margin: 8px 0;
+    float: right;
+}
+
+.info > div .content{
+    background-color: rgba(0,0,0,.25);
+    padding: 5px 10px;
+    margin: 5px 0;
+    border-radius: 3px;
+    height: 90px;
+    cursor: pointer;
+}
+
+.info > div h1{
+    text-transform: uppercase;
+    font-size: 10px;
+    margin: 3px 0 5px 0;
+}
+
+.info .author img{
+    height: 50px;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 5px 15px;
+}
+
+.info .author .name{
+    font-size: 20px;
+    line-height: 50px;
+}
+
+.info .category{
+    height: 94px;
+}
+
+.info .category .name{
+    font-size: 20px;
+    line-height: 60px;
+}

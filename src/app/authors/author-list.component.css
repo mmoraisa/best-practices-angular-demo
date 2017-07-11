@@ -1,0 +1,20 @@
+thead > tr th:first-child{
+    width: 40px;
+}
+
+tr{
+    cursor: pointer;
+}
+
+td{
+    line-height: 40px !important;
+}
+
+img{
+    border-radius: 50%;
+    height: 30px;
+}
+
+h1{
+    margin-bottom: 20px;
+}

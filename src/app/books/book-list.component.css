@@ -1,0 +1,11 @@
+tr{
+    cursor: pointer;
+}
+
+tbody > tr td:first-child{
+    white-space: nowrap;
+}
+
+h1{
+    margin-bottom: 20px;
+}

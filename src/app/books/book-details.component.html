@@ -1,0 +1,31 @@
+<section class="header row">
+    <div class="col-xs-12">
+        <h1>Book Details</h1>
+        <input type="text" class="form-control" [(ngModel)]='book.name'/>
+    </div>
+    <div class="col-xs-12">
+        <textarea class="form-control" [(ngModel)]='book.description'></textarea>
+        <button (click)='saveBook()' class="btn-save btn btn-primary"><span class="fa fa-save"></span> Save book</button>
+    </div>
+</section>
+<section class="info row">
+    <div class="author col-xs-12 col-sm-6">
+        <div class="content" [routerLink]="['/author',book.author.id]">
+            <h1>Author</h1>
+            <div class="row">
+                <img [src]='book.author.imageUrl'/>
+                <span class="name">
+                    {{ book.author.name }}
+                </span>
+            </div>
+        </div>
+    </div>
+    <div class="category col-xs-12 col-sm-6">
+        <div class="content" [routerLink]="['/category',book.category.id]">
+            <h1>Category</h1>
+            <div class="name col-xs-12">
+                {{ book.category.name }}
+            </div>
+        </div>
+    </div>
+</section>

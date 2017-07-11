@@ -23,7 +23,7 @@ export class AuthorDetailsComponent implements OnInit{
         this.books = this.__bookService.getBooksByAuthor(this.author.id);
     }
 
-    saveAuthor(author: IAuthor){
+    saveAuthor(){
         if(this.__authorService.saveAuthor(this.author)){
             console.log(this.author);
         }

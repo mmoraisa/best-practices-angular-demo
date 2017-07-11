@@ -4,7 +4,8 @@ import { CategoryService } from "app/categories/category.service";
 
 @Component({
     selector: 'lib-categories',
-    templateUrl: 'category-list.component.html'
+    templateUrl: 'category-list.component.html',
+    styleUrls: ['category-list.component.css']
 })
 export class CategoryListComponent implements OnInit{
     categories: ICategory[];

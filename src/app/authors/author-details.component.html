@@ -1,7 +1,12 @@
-<section class="header">
-    <h1>Author</h1>
-    <input type="text" class="form-control" [(ngModel)]='author.name'/>
-    <button (click)='saveAuthor()' class="btn-save btn btn-primary"><span class="fa fa-save"></span></button>
+<section class="header row">
+    <div class="col-xs-12 col-sm-2">
+        <img [src]='author.imageUrl' width="100%"/>
+    </div>
+    <div class="col-xs-12 col-sm-10">
+        <h1>Author Details</h1>
+        <input type="text" class="form-control" [(ngModel)]='author.name'/>
+        <button (click)='saveAuthor()' class="btn-save btn btn-primary"><span class="fa fa-save"></span></button>
+    </div>
 </section>
 <hr/>
 <section class="books">

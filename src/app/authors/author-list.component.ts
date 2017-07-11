@@ -5,7 +5,8 @@ import { AuthorService } from "app/authors/author.service";
 
 @Component({
     selector: 'lib-authors',
-    templateUrl: 'author-list.component.html'
+    templateUrl: 'author-list.component.html',
+    styleUrls: ['author-list.component.css']
 })
 export class AuthorListComponent implements OnInit{
     authors: IAuthor[];
