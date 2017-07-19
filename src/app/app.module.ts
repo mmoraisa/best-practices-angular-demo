@@ -12,6 +12,9 @@ import { CategoryDetailsComponent } from "app/categories/category-details.compon
 import { BookThumbComponent } from "app/books/book-thumb.component";
 import { AuthorDetailsComponent } from "app/authors/author-details.component";
 import { BookDetailsComponent } from "app/books/book-details.component";
+import { AuthorDetailGuard } from "app/authors/author-guard.service";
+import { BookDetailGuard } from "app/books/book-guard.service";
+import { CategoryDetailGuard } from "app/categories/category-guard.service";
 
 @NgModule({
   declarations: [
@@ -27,18 +30,43 @@ import { BookDetailsComponent } from "app/books/book-details.component";
   imports: [
     BrowserModule,
     RouterModule.forRoot([
-      { path: 'authors', component: AuthorListComponent },
-      { path: 'author/:id', component: AuthorDetailsComponent },
-      { path: 'books', component: BookListComponent },
-      { path: 'book/:id', component: BookDetailsComponent },
-      { path: 'categories', component: CategoryListComponent },
-      { path: 'category/:id', component: CategoryDetailsComponent },
-      { path: '', redirectTo: 'books', pathMatch: 'full' },
+      {
+        path: 'authors',
+        component: AuthorListComponent
+      },
+      {
+        path: 'author/:id',
+        canActivate: [ AuthorDetailGuard ],
+        component: AuthorDetailsComponent
+      },
+      {
+        path: 'books',
+        component: BookListComponent
+      },
+      {
+        path: 'book/:id',
+        canActivate: [ BookDetailGuard ],
+        component: BookDetailsComponent
+      },
+      {
+        path: 'categories',
+        component: CategoryListComponent
+      },
+      {
+        path: 'category/:id',
+        canActivate: [ CategoryDetailGuard ],
+        component: CategoryDetailsComponent
+      },
+      {
+        path: '',
+        redirectTo: 'books',
+        pathMatch: 'full'
+      },
       // { path: '**', component: PageNotFoundComponent },
     ]),
     FormsModule
   ],
-  providers: [],
+  providers: [ AuthorDetailGuard, BookDetailGuard, CategoryDetailGuard ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
