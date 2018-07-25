@@ -4,6 +4,8 @@ This project project made to show what is the best practices while developing An
 
 It's a Library Software that controls the books, categories and authors CRUD.
 
+![Library - Best Practices Angular Demo](https://s3.amazonaws.com/in3d-site/portfolio/prj_library.png "Library - Best Practices Angular Demo")
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
